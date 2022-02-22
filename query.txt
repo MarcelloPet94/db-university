@@ -3,4 +3,6 @@
 3) SELECT YEAR(`date_of_birth`) AS 'age' FROM `students` WHERE 'age' < 1992  
 4) SELECT `year` , `period` FROM `courses` WHERE `year` = 1 AND `period` LIKE 'I%' 	
 5) SELECT DATE(`date`) , `hour` FROM `exams` WHERE DATE(`date`) = '2020-06-20' AND `hour` > '14:00' 
-
+6) SELECT `level` FROM `degrees` WHERE `level` = 'magistrale' 
+7) SELECT COUNT(id) FROM `departments` 
+8) SELECT `phone` FROM `teachers` WHERE `phone` IS NULL 

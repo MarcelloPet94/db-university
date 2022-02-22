@@ -1,0 +1,6 @@
+1) SELECT * FROM `students` WHERE YEAR(`date_of_birth`) = '1990' 
+2) SELECT `cfu` FROM `courses` WHERE `cfu` > 10 
+3) SELECT YEAR(`date_of_birth`) AS 'age' FROM `students` WHERE 'age' < 1992  
+4) SELECT `year` , `period` FROM `courses` WHERE `year` = 1 AND `period` LIKE 'I%' 	
+5) SELECT DATE(`date`) , `hour` FROM `exams` WHERE DATE(`date`) = '2020-06-20' AND `hour` > '14:00' 
+

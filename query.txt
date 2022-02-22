@@ -6,3 +6,4 @@
 6) SELECT `level` FROM `degrees` WHERE `level` = 'magistrale' 
 7) SELECT COUNT(id) FROM `departments` 
 8) SELECT `phone` FROM `teachers` WHERE `phone` IS NULL 
+9) SELECT count(*) , YEAR(`enrolment_date`) FROM `students` GROUP BY YEAR(`enrolment_date`) 

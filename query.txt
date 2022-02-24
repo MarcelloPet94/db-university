@@ -1,9 +1,5 @@
-1) SELECT * FROM `students` WHERE YEAR(`date_of_birth`) = '1990' 
-2) SELECT `cfu` FROM `courses` WHERE `cfu` > 10 
-3) SELECT YEAR(`date_of_birth`) AS 'age' FROM `students` WHERE 'age' < 1992  
-4) SELECT `year` , `period` FROM `courses` WHERE `year` = 1 AND `period` LIKE 'I%' 	
-5) SELECT DATE(`date`) , `hour` FROM `exams` WHERE DATE(`date`) = '2020-06-20' AND `hour` > '14:00' 
-6) SELECT `level` FROM `degrees` WHERE `level` = 'magistrale' 
-7) SELECT COUNT(id) FROM `departments` 
-8) SELECT `phone` FROM `teachers` WHERE `phone` IS NULL 
-9) SELECT count(*) , YEAR(`enrolment_date`) FROM `students` GROUP BY YEAR(`enrolment_date`) 
+1) SELECT * FROM `degrees` RIGHT JOIN `students` ON `degrees`.`department_id` = `students`.`degree_id` WHERE `degrees`.`name` = 'Corso di Laurea in Economia'  
+2) SELECT * FROM `degrees` LEFT JOIN `departments` ON `departments`.`id` = `degrees`.`id` WHERE `departments`.`name` = 'Dipartimento di Neuroscienze' 
+3) SELECT * FROM `courses` LEFT JOIN `teachers` ON `courses`.`id` = `teachers`.`id` WHERE `teachers`.`id` = 44 
+4) SELECT * FROM `students` INNER JOIN `degrees` INNER JOIN `departments` ON `degrees`.`department_id` = `students`.`degree_id` AND `departments`.`id` = `degrees`.`id` ORDER BY `students`.`surname` ASC , `students`.`name` ASC 
+5) SELECT * FROM `degrees` INNER JOIN `teachers` INNER JOIN `courses` ON `courses`.`degree_id` = `degrees`.`id` AND `teachers`.`id` = `courses`.`id`
